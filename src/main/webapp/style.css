@@ -1,0 +1,840 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body{
+    width:100%;
+    height:100%;
+    margin: 0%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navicationBar{
+    width:5%;
+    height:100%;
+    background-color: #1c2026;
+}
+
+#cases{
+    width: 18%;
+    height:100%;
+    background-color: #2a3038;
+}
+
+#mainContainer{
+    width:77%;
+    height:100%;
+    background-color: #F7F8FB;
+}
+
+.navBoxes{
+    width:100%;
+    height:8%;
+    color: #b3b3b3;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navBoxes:hover{
+    background-color: #2A3038;
+}
+
+.navBoxes:focus{
+    background-color: #2A3038;
+}
+
+.alignTheOptions{
+    width:90%;
+    height:60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#titleBox{
+    width:100%;
+    height:6%;
+    display: flex;
+    padding: 10%;
+    color: white;
+    display: flex;
+    /* margin: auto; */
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid #1c2026;
+}
+
+#searchBarBox{
+    width:100%;
+    height:6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #1c2026;
+    color: #939AA3;
+}
+
+#searchBox{
+    width:80%;
+    height: 70%;
+    background-color: #1c2026;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+}
+
+#search{
+    width:70%;
+    height:70%;
+    background: none;
+    border: none;
+    color: #939AA3;
+}
+
+#addCasesBox{
+    width:100%;
+    height:7%;
+}
+
+textarea,input:focus {
+    outline: none;
+}
+
+
+
+#searchButton{
+    width:10%;
+    height: 90%;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+#listOfCases{
+    width: 100%;
+    height: 81%;
+    border-bottom: 1px solid #1c2026;
+    overflow-y: scroll;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+  
+  
+* {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+#addCases{
+    width:80%;
+    height:70%;
+    background-color: #1c2026;
+    border-radius: 3px;
+    color: #939AA3;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#addCaseBox{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top: 0%;
+    left:0%;
+    background-color: #0000005e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+#childBox{
+    width:35%;
+    height:60%;
+    margin-top: -5%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#cancelBox{
+    width:90%;
+    height:9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #B2B2B2;
+    /* margin: auto; */
+}
+
+#cancelButton{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 25px;
+    color: #B2B2B2;
+}
+
+#cancelButton:hover{
+    color: black;
+}
+
+label{
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+
+textarea{
+    width:100%;
+    height:30%;
+    padding-left: 2%;
+    padding-top: 1%;
+    border: 1px solid #e6e6e6;
+    border-radius:3px;
+    resize: none;
+    font-size: 16px;
+}
+
+input{
+    width:100%;
+    height:10%;
+    border: 1px solid #e6e6e6;
+    border-radius:3px;
+    background: none;
+    padding-left: 2%;
+    font-size: 16px;
+    color: #333;
+}
+
+#inputBoxes {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #333;
+}
+
+#createBox{
+    width: 90%;
+    height:10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#childCreateBox{
+    width:50%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons{
+    width:45%;
+    height:70%;
+    border: 1px solid #e6e6e6;
+    color: #777;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+#create{
+    background: #2a3038;
+    color: #fff;
+    border: none;
+}
+
+#cancel{
+    background: none;
+}
+
+#noCasesBox {
+    width: 45%;
+    height: 50%;
+    /* background-color: #1c2026; */
+    margin: auto;
+    margin-top: 15%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#lapImage{
+    width:43%;
+    height:50%;
+}
+
+#detailsOfCase{
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+}
+
+#newCreateButton{
+    width:30%;
+    height:10%;
+    background: #2a3038;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    font-size: 15px;
+}
+
+#showCaseNameBox{
+    width:95%;
+    height:7%;
+    border-bottom: 1px solid #e6e6e6;    
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+
+#textCaseName {
+    padding: 0% 3% 0% 3%;
+    height: 80%;
+    border: 1px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+}
+
+#createANewCase {
+    width: 15%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #2A3038;
+    margin-bottom: 1%;
+    border-radius: 2px;
+    color: white;
+    font-size: 13px;
+}
+
+#createANewCase:hover{
+    cursor: pointer;
+}
+
+#actionBox{
+    width:100%;
+    height:5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #e6e6e6;   
+    padding-left: 1.5%; 
+    font-size: 14px;
+}
+
+#actions{
+    width:15%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-right: 1px solid #e6e6e6;
+}
+
+.action{
+    width:30%;
+    height:100%;
+    cursor: pointer;
+}
+
+#saveStatus{
+    width:20%;
+    height:100%;
+    padding-left: 3%;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    border-right: 1px solid #e6e6e6;
+}
+
+#textApi{
+    width:20%;
+    height:100%;
+    border-right: 1px solid #e6e6e6; 
+}
+
+#textApi:hover{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+#allRequestBox{
+    width:100%;
+    overflow-y: scroll;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    /* padding-top: 3%; */
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    flex-direction: column;
+    background-color: #F7F8FB;
+}
+
+.request{
+    width:90%;
+    border: 1px solid #e6e6e6; 
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.requestNameBox{
+    width: 100%;
+    height:40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1%;
+}
+
+.requestNameAndApiType{
+    width:30%;
+    height:100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.deleteRequestBox{
+    width:5%;
+    height:100%;
+    /* background-color: #1c2026; */
+    cursor: pointer;
+}
+
+.textRequestName{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.apiTypeText{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.opertionBox{
+    margin-top: 2%;
+    width:100%;
+    padding: 1%;
+    /* height:300px; */
+    border: 1px solid #e6e6e6;
+    color: #777;
+    border-radius: 3px;
+}
+
+.optionsForRqOrVarBox{
+    width:100%;
+    height: 40px;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.option{
+    /* width:15%; */
+    padding-left: 2%;
+    padding-right: 2%;
+    height:100%;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.op:hover{
+    /* border-bottom: 3px solid black; */
+    /* border-width: 10%; */
+    color: #1c2026;
+}
+
+.urlBox{
+    width:100%;
+    height:40px;
+    margin-top: 1.5%;
+    border: 1px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.apiType{
+    width:15%;
+    height:100%;
+    padding: 1%;
+    border: 1px solid #e6e6e6;
+    background: none;
+    color: #777;
+    font-size: 14px;
+}
+
+.rq-url{
+    width:85%;
+    height:100%;
+    padding-left: 2%;
+    background: none;
+}
+
+
+
+.optionForParam{
+    width:100%;
+    height:60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nameValueBox{
+    width:100%;
+    height:45px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 3px;
+}
+
+.textName{
+    width:40%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1%;
+}
+
+.textValue{
+    width:40%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    padding-left: 1%;
+    justify-content: flex-start;
+}
+
+.textRemove{
+    width:0%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1%;
+}
+
+.inputs {
+    width: 100%;
+    padding: 1.5%;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputsChild{
+    width:100%;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.inputKey{
+    width:47%;
+    height:80%;
+}
+
+.inputValue{
+    width:47%;
+    height:80%;
+}
+
+.inputBoxRemove{
+    width:0%;
+    height:80%;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    color: #B2B2B2;
+}
+
+.inputBoxRemove:hover{
+    color: #1c2026;
+}
+
+.fa-regular, .far {
+    font-weight: 600;
+}
+
+#addRequestBox {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 13px;
+    padding-left: 0%;
+}
+
+#addRequestButton{
+    width:15%;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    color: black;
+    font-size: 14px;
+    transition-duration: 0.5s;
+}
+
+#addRequestButton:hover{
+    background-color: #1c2026;
+    color: white;
+    cursor: pointer;
+}
+
+.addInputsBox{
+    width:100%;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.addInput{
+    width:15%;
+    height:80%;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    color: black;
+    font-size: 14px;
+    transition-duration: 0.5s;
+}
+
+.addInput:hover{
+    background-color: #1c2026;
+    color: white;
+    cursor: pointer;
+}
+
+#allResultBox{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    /* background-color: #1c202615; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+#cancelBoxForResult{
+    width:90%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    /* background-color: #1c2026; */
+}
+
+#optionForResultBox{
+    width:100%;
+    height:30px;
+    display: flex;
+    align-items: center;
+}
+
+.optionForResult {
+    width: 10%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#resultCountBox{
+    width:50%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.count{
+    width:20%;
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#results{
+    width: 77%;
+    height: 88%;
+    background-color: #F7F8FB;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#allResults{
+    width:90%;
+    height:90%;
+    overflow-y: scroll;
+    /* background-color: #1c2026; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result{
+    width:90%;
+    padding: 2%;
+    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dueAndStatusBox {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.statusBox{
+    width:20%;
+    height:90%;
+    /* background-color: #1c2026; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.dueBox{
+    width:20%;
+    height:90%;
+    /* background-color: #1c2026; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.resultDetails{
+    width:100%;
+    padding: 1%;
+    height: 400px;
+    border: 1px solid #e6e6e6;
+    margin-top: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    overflow-y: scroll;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+.headerBox{
+    width:100%;
+    padding: 1%;
+    /* height: 400px; */
+    border: 1px solid #e6e6e6;
+    margin-top: 0%;
+    flex-wrap: wrap;
+    text-align: justify;
+    overflow-y: scroll;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+    padding: 1%;
+    /* background-color: #1c2026; */
+    display: none;
+}
+
+.headerList{
+    width:100%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 14px;
+}
+
+.headerLeft{
+    width:20%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 500;
+}
+
+.headerMid{
+    width:10%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.headerRight{
+    width:70%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}

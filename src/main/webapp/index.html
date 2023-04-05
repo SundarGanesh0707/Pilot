@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css" id="mode"/>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/3d481caf2d.js" crossorigin="anonymous"></script>
+</head>
+<body onload="getCases()">
+    
+    <div id = "navicationBar"><div class = "navBoxes center" onclick="switchToCase()"><div class = "alignTheOptions"><i class="fa-sharp fa-solid fa-calendar-days" style="font-size: 20px;"></i><span style="font-size: 10px;font-weight: 500;">Test Cases</span></div></div></div>
+
+    <div id = "cases">
+        <div id = "titleBox"><i class="fa-sharp fa-solid fa-calendar-days" style="font-size: 15px;color: fff;"></i><span style="    font-size: 14px;font-weight: 400;font-weight: 500;">Test Cases</span><p style="font-size: 15px;border-bottom: 2px solid white;font-weight: 400;height:20px;">Manage</p></div>
+        <div id = "searchBarBox">
+            <div id = "searchBox">
+                <input id = "search" type = "text" placeholder="Search">
+                <div id = "searchButton" onclick="search(this)"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+        </div>
+        <div id = "listOfCases" onload="switchToCase()"></div>
+        <div id = "addCasesBox" class = "center"><div id = "addCases" onclick="addCase()" class="center"><i class="fa-regular fa-plus"></i> Add Case</div></div>
+    </div>
+
+
+    <div id = "mainContainer">
+
+<div id = "showCaseNameBox"><div id = "textCaseName"></div><div id = "createANewCase" onclick="addCase()"><i class="fa-regular fa-plus"></i> <span>Create Test Case</span></div></div><div id = "actionBox"><div id = "actions"><div class="action center" onclick="run()"><i class="fa-regular fa-circle-play"></i></div><div class="action center" onclick="save()"><i class="fa-solid fa-floppy-disk"></i></div><div class="action center" onclick="edit()"><i class="fa-solid fa-file-pen"></i></div></div><div id = "saveStatus">Not Save</div><div id = "textApi" class="center"><span class="material-symbols-outlined">webhook</span>&nbspAPI</div></div>
+
+        <div id = "allRequestBox">
+
+            <!-- <div class = "request">
+                <div class = "requestNameBox">
+                    <div class = "requestNameAndApiType">
+                        <p class = "textRequestName">Request</p>
+                        <p class = "apiTypeText">GET</p>
+                    </div>
+                    <div class = "deleteRequestBox center">
+                        <i class="fa-sharp fa-regular fa-xmark" style = "font-weight: 600"  onclick="removeRequest(this)"></i>
+                    </div>
+                </div>
+                <div class="opertionBox">
+                    <div class = "optionsForRqOrVarBox">
+                        <div class="option center">
+                            <span class = "op">Request</span>
+                        </div>
+                    </div>
+                    <div class = "urlBox">
+                        <select class="apiType" onchange="changeAPITypeText(this)">
+                            <option value = "GET">GET</option>
+                            <option value = "POST">POST</option>
+                        </select>
+                        <input type = "text" class = "rq-url">
+                    </div>
+                    <div class = "optionForParam">
+                        <div class = "option center">
+                            <span class = "op">Param</span>
+                        </div>
+                    </div>
+                    <div class = "nameValueBox">
+                        <div class = "textName">Name</div>
+                        <div class = "textValue">Value</div>
+                        <div class = "textRemove"></div>
+                    </div>
+                    <div class = "inputs"></div>
+                    <div class = "addInputsBox">
+                        <div class="addInput center" onclick="addInput(this)">+ Params</div>
+                    </div>
+                </div>
+            </div> -->
+
+            <div id = "addRequestBox">
+            <div id = "addRequestButton" class="center" onclick="createRequest(this)">+ Add Request</div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- <div id = "allResultBox">
+        
+        <div id = "results">
+            <div id = "cancelBoxForResult">
+
+                <div id = "resultCountBox">
+                <div class = "count"><span class = "text">TOTAL</span><p>10</p></div>
+                <div class = "count" style="color: #05c505;"><span class = "text">SUCCEEDED</span><p>10</p></div>
+                <div class = "count" style ="color:#e01d1d"><span class = "text">FAILED</span><p>0</p></div>
+                </div> 
+
+                <i class="fa-sharp fa-regular fa-xmark" style = "font-weight: 600;"  onclick="removeResult(this)"></i>
+            </div>
+            <div id = "allResults">
+
+
+<div class = "result"><div class = "dueAndStatusBox">
+<div class = "statusBox">
+<p>Result</p>
+<p>200</p>
+</div>
+<div class = "dueBox">
+<p>Duration</p>
+<p>1.3ms</p>
+</div>
+</div>
+<div id = "optionForResultBox">
+<div class = "optionForResult center" onclick="switchToBody(this)">
+    Body
+</div>
+<div class = "optionForResult center" onclick="switchToHeader(this)">
+    Header
+</div>
+</div>
+<p class = "resultDetails">
+</p>
+<div class = "headerBox">
+    <div class="headerList">
+        <div class = "headerLeft">
+            Method Type
+        </div>
+        <div class = "headerMid">
+            :
+        </div>
+        <div class = "headerRight">
+            
+        </div>
+    </div>
+    <div class="headerList">
+        <div class = "headerLeft">
+            URL
+        </div>
+        <div class = "headerMid">
+            :
+        </div>
+        <div class = "headerRight">
+            
+        </div>
+    </div>
+    <div class="headerList">
+        <div class = "headerLeft">
+            Params
+        </div>
+        <div class = "headerMid">
+            :
+        </div>
+        <div class = "headerRight">
+            
+        </div>
+    </div>
+</div>
+</div>
+
+
+            </div>
+        </div>
+    </div> -->
+
+</body>
+</html>
+
+<!-- <div class = "inputs"><div class = "inputsChild"><input class = "inputKey"><input class = "inputValue"><div class = "inputBoxRemove center"><i class='fa-sharp fa-regular fa-xmark' style = "font-weight: 600"  onclick="removeInput(this.parentElement)"></i></div></div> </div> -->
+
+
+<!-- <div id = "resultCountBox"><div class = "count"><span class = "text">TOTAL</span><p id = "totalCount">10</p></div><div class = "count" style="color: #05c505;"><span class = "text">SUCCEEDED</span><p id = "successCount">10</p></div><div class = "count" style ="color:#e01d1d"><span class = "text">FAILED</span><p id = "failCount">0</p></div></div>  -->
+<div class = "headerBox"><div class="headerList"><div class = "headerLeft">Method Type</div><div class = "headerMid">:</div><div class = "headerRight">'++'</div></div><div class="headerList"><div class = "headerLeft">URL</div><div class = "headerMid">:</div><div class = "headerRight">'++'</div></div><div class="headerList"><div class = "headerLeft">Params</div><div class = "headerMid">:</div><div class = "headerRight">'++'</div></div></div>
